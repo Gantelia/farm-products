@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { GlobalStyle } from "./styles";
 import { FEATURE_LIST } from "../../mocks/feature-list.js";
 import PageWrapper from "../layout/page-wrapper/page-wrapper";

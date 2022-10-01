@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { StyledHeader } from "./styles.js";
 import Logo from "../../ui/logo/logo";
 import Nav from "../nav/nav";

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import ProviderMark from "../provider-mark/provider-mark";
 import Title from "../../styled/title/title";
 import { Feature, Header } from "./styles.js";

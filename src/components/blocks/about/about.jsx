@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Title from "../../styled/title/title";
 import { StyledAbout, AboutWrapper } from "./styles.js";
 import P from "../../styled/p/p";

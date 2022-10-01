@@ -1,5 +1,6 @@
-import { StyledProviderMark } from "./styles";
+import React from 'react';
 
+import { StyledProviderMark } from "./styles";
 import { ProductProvider } from "../../../style-const";
 
 function ProviderMark({ provider }) {

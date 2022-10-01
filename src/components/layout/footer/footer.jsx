@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Logo from "../../ui/logo/logo";
 import { Copyright, StyledFooter } from "./styles";
 

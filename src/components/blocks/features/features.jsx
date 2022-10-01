@@ -1,3 +1,5 @@
+import React from 'react';
+
 import FeatureCard from "../../ui/feature-card/feature-card";
 import Title from "../../styled/title/title";
 import Button from "../../ui/button/button.jsx";
