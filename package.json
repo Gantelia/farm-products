@@ -9,6 +9,9 @@
         "styled-components": "^5.3.6",
         "swiper": "^8.4.2"
     },
+    "scripts": {
+        "build": "webpack"
+    },
     "browserslist": {
         "production": [
             ">0.2%",
