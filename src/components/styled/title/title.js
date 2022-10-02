@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { TitleSize } from "../../../style-const";
+import { TitleSize } from '../../../style-const';
 
 const StyledTitle = styled.h1.attrs((props) => ({
   children: props.children

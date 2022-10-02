@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledButton = styled.a`
   padding: 17px 24px 16px;
@@ -10,7 +10,7 @@ const StyledButton = styled.a`
   font-size: ${(props) => props.theme.fontSize};
   font-weight: 700;
   line-height: ${(props) => props.theme.lineHeight};
-  min-width: ${(props) => (props.$maxWidth ? "100%" : "260px")};
+  min-width: ${(props) => (props.$maxWidth ? '100%' : '260px')};
   max-width: 700px;
   text-decoration: none;
   text-align: center;
