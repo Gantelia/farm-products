@@ -29,6 +29,52 @@
             "last 1 safari version"
         ]
     },
+    "babel": {
+      "presets": [
+        "@babel/preset-react"
+      ]
+    },
+    "eslintConfig": {
+      "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "htmlacademy/react"
+      ],
+        "rules": {
+        "react/prop-types": [
+          "off"
+        ]
+      },
+      "parser": "@babel/eslint-parser",
+        "parserOptions": {
+        "sourceType": "module",
+          "ecmaFeatures": {
+          "jsx": true
+        }
+      },
+      "env": {
+        "browser": true,
+        "node": true
+      },
+      "settings": {
+        "react": {
+          "version": "detect"
+        }
+      }
+    },
+    "stylelint": {
+      "prosessors": [
+        "stylelint-processor-styled-components"
+      ],
+      "extends": [
+        "stylelint-config-styled-components",
+        "stylelint-config-htmlacademy"
+      ],
+      "rules": {
+        "no-empty-source": null,
+        "value-keyword-case": null
+      }
+    },
     "devDependencies": {
         "@babel/core": "^7.19.3",
         "@babel/eslint-parser": "^7.19.1",

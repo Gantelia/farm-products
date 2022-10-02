@@ -28,3 +28,4 @@ export const TitleLevel = {
   DEFAULT: 3,
   H4: 4
 };
+

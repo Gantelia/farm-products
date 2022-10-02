@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -14,9 +13,9 @@ module.exports = {
       {
         test: /\.cmp.svg$/,
         use: {
-          loader: "@svgr/webpack",
+          loader: '@svgr/webpack',
           options: {
-            exportType: "named"
+            exportType: 'named'
           }
         },
       },
