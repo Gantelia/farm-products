@@ -10,11 +10,11 @@
         "swiper": "^8.4.2"
     },
     "scripts": {
-        "build": "webpack -p --mode production",
+        "build": "webpack --mode production",
         "start": "webpack server --mode development",
         "eslint": "eslint --ext .jsx --ext .js ./src/",
-        "svgr": "svgr --ext=jsx -d ../farm-products/src/components/icons/ src/assets/icons/svg/",
-        "csslint": "stylelint './**/*.(js|jsx)'"
+        "svgr": "svgr --ext .jsx -d ../farm-products/src/components/icons/ src/assets/svg/",
+        "stylelint": "stylelint ./src/**/*.{js,jsx}"
     },
     "browserslist": {
         "production": [
@@ -29,57 +29,57 @@
             "last 1 safari version"
         ]
     },
-    "babel": {
-      "presets": [
-        "@babel/preset-react"
-      ]
-    },
     "eslintConfig": {
       "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "htmlacademy/react"
-      ],
-        "rules": {
-        "react/prop-types": [
-          "off"
-        ]
-      },
-      "parser": "@babel/eslint-parser",
-        "parserOptions": {
-        "sourceType": "module",
-          "ecmaFeatures": {
-          "jsx": true
-        }
-      },
-      "env": {
-        "browser": true,
-        "node": true
-      },
-      "settings": {
-        "react": {
-          "version": "detect"
-        }
-      }
-    },
-    "stylelint": {
-      "prosessors": [
-        "stylelint-processor-styled-components"
-      ],
-      "extends": [
-        "stylelint-config-styled-components",
-        "stylelint-config-htmlacademy"
+          "eslint:recommended",
+          "plugin:react/recommended",
+          "htmlacademy/react"
       ],
       "rules": {
-        "no-empty-source": null,
-        "value-keyword-case": null
+          "react/prop-types": [
+              "off"
+          ]
+      },
+      "parser": "@babel/eslint-parser",
+      "parserOptions": {
+          "sourceType": "module",
+          "ecmaFeatures": {
+              "jsx": true
+          }
+      },
+      "env": {
+          "browser": true,
+          "node": true
+      },
+      "settings": {
+          "react": {
+              "version": "detect"
+          }
       }
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-react"
+        ]
+    },
+    "stylelint": {
+        "processors": ["stylelint-processor-styled-components"],
+        "extends": [
+            "stylelint-config-styled-components",
+            "stylelint-config-htmlacademy"
+        ],
+        "rules": {
+            "no-empty-source": null,
+            "value-keyword-case": null
+        },
+        "customSyntax": "@stylelint/postcss-css-in-js"
     },
     "devDependencies": {
         "@babel/core": "^7.19.3",
         "@babel/eslint-parser": "^7.19.1",
         "@babel/preset-env": "^7.19.3",
         "@babel/preset-react": "^7.18.6",
+        "@stylelint/postcss-css-in-js": "^0.38.0",
         "@svgr/cli": "^6.3.1",
         "@svgr/webpack": "^6.3.1",
         "babel-loader": "^8.2.5",
