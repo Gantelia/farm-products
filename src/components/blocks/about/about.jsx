@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Title from "../../styled/title/title";
-import { StyledAbout, AboutWrapper } from "./styles.js";
-import P from "../../styled/p/p";
-import { TitleSize, TitleLevel } from "../../../style-const";
+import Title from '../../styled/title/title';
+import { StyledAbout, AboutWrapper } from './styles.js';
+import P from '../../styled/p/p';
+import { TitleSize, TitleLevel } from '../../../style-const';
 
 function About() {
   return (

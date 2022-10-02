@@ -1,14 +1,14 @@
 import React from 'react';
 
-import FeatureCard from "../../ui/feature-card/feature-card";
-import Title from "../../styled/title/title";
-import Button from "../../ui/button/button.jsx";
-import { StyledFeatures, FeatureList } from "./styles";
-import { TitleSize, TitleLevel } from "../../../style-const";
+import FeatureCard from '../../ui/feature-card/feature-card';
+import Title from '../../styled/title/title';
+import Button from '../../ui/button/button.jsx';
+import { StyledFeatures, FeatureList } from './styles';
+import { TitleSize, TitleLevel } from '../../../style-const';
 
 function Features({ features }) {
   return (
-    <StyledFeatures className="features">
+    <StyledFeatures>
       {features?.length && (
         <>
           <Title
@@ -18,14 +18,14 @@ function Features({ features }) {
           >
             Почему фермерские продукты лучше?
           </Title>
-          <FeatureList className="features__list">
+          <FeatureList>
             {features?.map((feature) => (
-              <li className="features__item" key={feature.id}>
+              <li key={feature.id}>
                 <FeatureCard {...feature} />
               </li>
             ))}
           </FeatureList>
-          <Button link={"/buy"}>Купить</Button>
+          <Button link={'/buy'}>Купить</Button>
         </>
       )}
     </StyledFeatures>

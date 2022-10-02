@@ -16,27 +16,6 @@
         "svgr": "svgr --ext=jsx -d ../farm-products/src/components/icons/ src/assets/icons/svg/",
         "csslint": "stylelint './**/*.(js|jsx)'"
     },
-    "eslintConfig": {
-        "extends": [
-            "eslint:recommended",
-            "plugin:react/recommended",
-            "htmlacademy/react"
-        ],
-        "rules": {
-            "react/prop-types": [
-                "off"
-            ]
-        },
-        "parser": "babel-eslint",
-        "env": {
-            "browser": true
-        },
-        "settings": {
-            "react": {
-                "version": "17.0.2"
-            }
-        }
-    },
     "browserslist": {
         "production": [
             ">0.2%",
