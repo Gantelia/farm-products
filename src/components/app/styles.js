@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     position: relative;
-    margin: 0;
+    margin: 0 auto;
     height: 100%;
     font-family: ${(props) => props.theme.fontFamily};
     font-size: ${(props) => props.theme.fontSize};
@@ -20,7 +20,6 @@ export const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.basicTextColor};
     background-color: #ffffff;
     width: ${(props) => props.theme.pageWidth};
-    margin: 0 auto;
   }
 
   *,
