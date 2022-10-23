@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Section from "../../styled/section/section";
-import Ul from "../../styled/ul/ul";
+import Section from '../../styled/section/section';
+import Ul from '../../styled/ul/ul';
 
 export const StyledFeatures = styled(Section)`
   display: flex;

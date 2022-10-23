@@ -14,9 +14,7 @@
         "start": "webpack server --mode development",
         "eslint": "eslint --ext .jsx --ext .js ./src/",
         "svgr": "svgr --ext .jsx -d ../farm-products/src/components/icons/ src/assets/svg/",
-        "stylelint": "stylelint \"./src/**/*.{js,jsx}\"",
-        "fix-code": "prettier-eslint --write 'src/**/*.{js,jsx}' ",
-        "fix-styles": "prettier-stylelint --write 'src/**/*.{js,jsx}' "
+        "stylelint": "stylelint \"./src/**/*.{js,jsx}\""
     },
     "browserslist": {
         "production": [
@@ -35,8 +33,7 @@
         "extends": [
             "eslint:recommended",
             "plugin:react/recommended",
-            "htmlacademy/react",
-            "eslint-config-htmlacademy"
+            "htmlacademy/react"
         ],
         "rules": {
             "react/prop-types": [
@@ -72,12 +69,12 @@
         "extends": [
             "stylelint-config-recommended",
             "stylelint-config-styled-components",
-            "stylelint-config-htmlacademy",
-            "stylelint-config-prettier"
+            "stylelint-config-htmlacademy"
         ],
         "rules": {
             "selector-max-id": 1,
-            "value-keyword-case": null
+            "value-keyword-case": null,
+            "no-empty-source": null
         },
         "customSyntax": "postcss-scss"
     },
@@ -92,11 +89,9 @@
         "editorconfig": "^0.15.3",
         "eslint": "^8.24.0",
         "eslint-config-htmlacademy": "^7.0.0",
-        "eslint-plugin-react": "^7.31.8",
+        "eslint-plugin-react": "^7.31.10",
         "html-webpack-plugin": "^5.5.0",
         "postcss-scss": "^4.0.5",
-        "prettier-eslint": "^15.0.1",
-        "prettier-eslint-cli": "^7.1.0",
         "stylelint": "^14.13.0",
         "stylelint-config-htmlacademy": "^1.1.1",
         "stylelint-config-prettier": "^9.0.3",

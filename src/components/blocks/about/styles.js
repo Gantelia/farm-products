@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import farmer from "../../../assets/farmer-bg.svg";
-import Section from "../../styled/section/section";
+import farmer from '../../../assets/farmer-bg.svg';
+import Section from '../../styled/section/section';
 
 export const StyledAbout = styled(Section)`
   padding-top: 183px;
