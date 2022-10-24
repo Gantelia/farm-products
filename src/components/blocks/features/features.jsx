@@ -1,10 +1,9 @@
 import React from 'react';
 
 import FeatureCard from '../../ui/feature-card/feature-card';
-import Title from '../../styled/title/title';
+import Title, { TitleSize, TitleLevel } from '../../ui/title/title';
 import Button from '../../ui/button/button.jsx';
 import { StyledFeatures, FeatureList } from './styles';
-import { TitleSize, TitleLevel } from '../../../style-const';
 
 function Features({ features }) {
   return (
@@ -12,8 +11,8 @@ function Features({ features }) {
       {features?.length && (
         <>
           <Title
-            size={TitleSize.MEDIUM}
             titleLevel={TitleLevel.H2}
+            size={TitleSize.MEDIUM}
             marginBottom={64}
           >
             Почему фермерские продукты лучше?

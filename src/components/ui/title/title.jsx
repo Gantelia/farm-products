@@ -1,7 +1,16 @@
-export const ProductProvider = {
-  FARM: 'farm',
-  SHOP: 'shop'
-};
+import StyledTitle from './styles';
+import React from 'react';
+
+function Title({titleLevel, size, marginBottom, children}) {
+  return (
+    <StyledTitle as={`h${titleLevel}`} size={size} marginBottom={marginBottom}>
+      {children}
+    </StyledTitle>
+  );
+}
+
+export default Title;
+
 
 export const TitleSize = {
   BIG: {

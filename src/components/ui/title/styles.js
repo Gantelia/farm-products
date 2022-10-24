@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
-import { TitleSize } from '../../../style-const';
+import { TitleSize } from './title';
 
-const StyledTitle = styled.h1.attrs((props) => ({
-  children: props.children
-}))`
+const StyledTitle = styled.h1`
   margin: 0;
   margin-bottom: ${(props) =>
     props.marginBottom ? `${props.marginBottom}px` : 0};

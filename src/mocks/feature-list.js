@@ -1,4 +1,4 @@
-import { ProductProvider } from '../style-const';
+import { ProductProvider } from '../components/ui/provider-mark/provider-mark';
 
 export const FEATURE_LIST = [
   {

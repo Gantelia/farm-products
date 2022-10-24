@@ -1,17 +1,16 @@
 import React from 'react';
 
-import Title from '../../styled/title/title';
+import Title, { TitleSize, TitleLevel } from '../../ui/title/title';
 import { StyledAbout, AboutWrapper } from './styles.js';
 import P from '../../styled/p/p';
-import { TitleSize, TitleLevel } from '../../../style-const';
 
 function About() {
   return (
     <StyledAbout>
       <AboutWrapper>
         <Title
-          size={TitleSize.BIG}
           titleLevel={TitleLevel.H1}
+          size={TitleSize.BIG}
           marginBottom={24}
         >
           Магазин фермерских

@@ -1,7 +1,11 @@
 import React from 'react';
 
 import { StyledProviderMark } from './styles';
-import { ProductProvider } from '../../../style-const';
+
+export const ProductProvider = {
+  FARM: 'farm',
+  SHOP: 'shop'
+};
 
 function ProviderMark({ provider }) {
   let options;
@@ -22,3 +26,4 @@ function ProviderMark({ provider }) {
 }
 
 export default ProviderMark;
+
