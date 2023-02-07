@@ -1,13 +1,20 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { P } from "../../styled";
 
 export const StyledFooter = styled.footer`
-  padding: 18px 86px;
+  width: ${({ theme }) => theme.pageWidth};
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 18px ${({ theme }) => theme.pagePadding};
+  height: 79px;
+  background-color: ${({ theme }) => theme.colorWhite};
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 `;
 
-export const Copyright = styled.p`
-  max-width: 700px;
+export const Copyright = styled(P)`
+  max-width: 148px;
+  font-size: ${({ theme }) => theme.fontSize};
+  vertical-align: middle;
+  text-align: right;
 `;

@@ -1,9 +1,8 @@
-import styled from 'styled-components';
-
-import { ProductProvider } from '../provider-mark/provider-mark';
+import styled from "styled-components";
+import { ProductProvider } from "../provider-mark/provider-mark";
 
 export const Feature = styled.article`
-  padding: ${(props) => props.theme.indent};
+  padding: ${({ theme }) => theme.indent};
   height: 100%;
   background-color: ${(props) =>
     props.provider === ProductProvider.FARM
@@ -14,7 +13,7 @@ export const Feature = styled.article`
 export const Header = styled.header`
   padding-left: 76px;
   position: relative;
-  margin-bottom: ${(props) => props.theme.indent};
+  margin-bottom: ${({ theme }) => theme.indent};
 
   &::before {
     content: "";

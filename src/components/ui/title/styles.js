@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { TitleSize } from './title';
+import { TitleSize } from "./title";
 
 const StyledTitle = styled.h1`
   margin: 0;
@@ -10,7 +10,7 @@ const StyledTitle = styled.h1`
   font-size: ${(props) =>
     `${props.size.fontSize}px` || TitleSize.DEFAULT.fontSize};
   line-height: ${(props) =>
-    `${props.size.lineHeight}px` || TitleSize.DEFAULT.lineHeight};
+    props.size.lineHeight || TitleSize.DEFAULT.lineHeight};
 `;
 
 export default StyledTitle;

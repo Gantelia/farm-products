@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import P from '../../styled/p/p';
+import { P } from "../../styled";
 
 export const StyledProviderMark = styled(P).attrs((props) => ({
-  children: props.options.text
+  children: props.options.text,
 }))`
   padding: 2px 10px;
   display: inline-block;

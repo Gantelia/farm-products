@@ -1,12 +1,11 @@
 import styled from "styled-components";
-
 import farmer from "../../../assets/svg/farmer-bg.svg";
-import Section from "../../styled/section/section";
+import { Section } from "../../styled";
 
 export const StyledAbout = styled(Section)`
   padding-top: 183px;
   padding-bottom: 183px;
-  background-color: ${(props) => props.theme.bgBasicColor};
+  background-color: ${({ theme }) => theme.bgBasicColor};
   position: relative;
 
   &::after {

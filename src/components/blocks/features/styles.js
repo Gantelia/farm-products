@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import Section from '../../styled/section/section';
-import Ul from '../../styled/ul/ul';
+import Section from "../../styled/section/section";
+import { Ul } from "../../styled";
 
 export const StyledFeatures = styled(Section)`
   display: flex;
@@ -11,7 +11,7 @@ export const StyledFeatures = styled(Section)`
 
 export const FeatureList = styled(Ul)`
   display: grid;
-  gap: ${(props) => props.theme.indent};
+  gap: ${({ theme }) => theme.indent};
   grid-template-columns: 1fr 1fr;
   margin-bottom: 64px;
   grid-auto-rows: minmax(197px, 1fr);

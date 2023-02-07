@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledHeader = styled.header`
-  padding: 10px 90px;
+  padding: 10px ${({ theme }) => theme.pagePadding};
   display: flex;
   justify-content: space-between;
   align-items: center;
