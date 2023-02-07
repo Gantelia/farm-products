@@ -1,58 +1,55 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
   },
   module: {
     rules: [
       {
         test: /\.cmp.svg$/,
         use: {
-          loader: '@svgr/webpack',
+          loader: "@svgr/webpack",
           options: {
-            exportType: 'named'
-          }
+            exportType: "named",
+          },
         },
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: [
-              '@babel/preset-env',
-              '@babel/preset-react',
-            ],
+            presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
       },
       {
         test: /(.png|((?<!.cmp).svg)|.jpg|.jpeg|.gif|.woff|.woff2|.eot|.ttf|.otf)$/,
-        type: 'asset/resource'
+        type: "asset/resource",
       },
-    ]
+    ],
   },
   resolve: {
-    extensions: ['.jsx', '.js'],
+    extensions: [".jsx", ".js"],
     alias: {
-      src: path.resolve(__dirname, 'src'),
-    }
+      src: path.resolve(__dirname, "src"),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'public/index.html',
-    })
+      template: "public/index.html",
+    }),
   ],
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   devServer: {
     static: {
-      directory: path.join(__dirname, 'public'),
+      directory: path.join(__dirname, "public"),
     },
     historyApiFallback: true,
     open: true,
