@@ -1,6 +1,6 @@
 import React from "react";
 
-import Title, { TitleSize, TitleLevel } from "../../ui/title/title";
+import Title, { TitleSize } from "../../ui/title/title";
 import { StyledAbout, AboutWrapper } from "./styles.js";
 import { P } from "../../styled";
 
@@ -8,11 +8,7 @@ function About() {
   return (
     <StyledAbout>
       <AboutWrapper>
-        <Title
-          titleLevel={TitleLevel.H1}
-          size={TitleSize.BIG}
-          marginBottom={24}
-        >
+        <Title as="h1" size={TitleSize.BIG} marginBottom={24}>
           Магазин фермерских
           <br />
           продуктов с доставкой

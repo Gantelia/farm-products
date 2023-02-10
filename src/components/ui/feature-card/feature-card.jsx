@@ -1,6 +1,6 @@
 import React from "react";
 import ProviderMark from "../provider-mark/provider-mark";
-import Title, { TitleLevel, TitleSize } from "../title/title";
+import Title, { TitleSize } from "../title/title";
 import { Feature, Header } from "./styles.js";
 import { P } from "../../styled";
 
@@ -9,7 +9,7 @@ function FeatureCard({ provider, title, description, image }) {
     <Feature provider={provider}>
       <Header image={image}>
         <ProviderMark provider={provider} />
-        <Title titleLevel={TitleLevel.DEFAULT} size={TitleSize.SMALL}>
+        <Title as="h3" size={TitleSize.EXTRA_SMALL}>
           {title}
         </Title>
       </Header>
