@@ -10,6 +10,8 @@ export const StyledFooter = styled.footer`
   height: 79px;
   background-color: ${({ theme }) => theme.colorWhite};
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
 `;
 
 export const Copyright = styled(P)`

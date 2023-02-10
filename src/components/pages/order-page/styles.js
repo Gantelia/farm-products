@@ -1,23 +1,22 @@
 import styled from "styled-components";
-import { Section, Label } from "/src/components/styled";
+import { Section, Label } from "../../styled";
+import { TextInput } from "../../ui/text-input/text-input";
 
 const leftWidth = "353px";
 
 export const StyledOrder = styled(Section)`
-  position: absolute;
-  top: ${({ theme }) => theme.headerHeight};
-  bottom: ${({ theme }) => theme.footerHeight};
   display: flex;
   padding-top: 40px;
   padding-bottom: 0;
   background-color: ${({ theme }) => theme.bgColorGray};
   max-width: ${({ theme }) => theme.pageWidth};
+  width: auto;
+  height: 100%;
 `;
 
 export const LeftColumn = styled.div`
   width: ${leftWidth};
   padding-right: ${({ theme }) => theme.indent};
-  overflow-y: auto;
   scrollbar-gutter: overlay;
   max-height: 100%;
 `;
@@ -35,5 +34,5 @@ export const PriceValue = styled.span`
   display: block;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 `;
