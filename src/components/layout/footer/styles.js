@@ -10,7 +10,10 @@ export const StyledFooter = styled.footer`
   height: 79px;
   background-color: ${({ theme }) => theme.colorWhite};
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 2;
 `;
 
