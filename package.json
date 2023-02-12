@@ -2,12 +2,13 @@
   "name": "farm-products",
   "version": "0.1.0",
   "private": "true",
+  "type": "module",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
     "styled-components": "^5.3.6",
-    "swiper": "^8.4.2"
+    "swiper": "^9.0.4"
   },
   "scripts": {
     "build": "webpack --mode production",
@@ -88,6 +89,7 @@
     "@svgr/cli": "^6.3.1",
     "@svgr/webpack": "^6.3.1",
     "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.3",
     "editorconfig": "^0.15.3",
     "eslint": "^8.24.0",
     "eslint-config-htmlacademy": "^7.0.0",
@@ -95,6 +97,7 @@
     "html-webpack-plugin": "^5.5.0",
     "postcss-scss": "^4.0.5",
     "prettier": "^2.8.3",
+    "style-loader": "^3.3.1",
     "stylelint": "^14.13.0",
     "stylelint-config-htmlacademy": "^1.1.1",
     "stylelint-config-prettier": "^9.0.4",

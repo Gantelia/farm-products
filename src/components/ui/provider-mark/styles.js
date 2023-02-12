@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { P } from "../../styled";
+import { P } from "../../styled/index.js";
 
 export const StyledProviderMark = styled(P).attrs((props) => ({
   children: props.options.text,

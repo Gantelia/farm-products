@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import Logo from '../../ui/logo/logo';
-import { Copyright, StyledFooter } from './styles';
+import Logo from "../../ui/logo/logo";
+import { Copyright, StyledFooter } from "./styles.js";
 
 function Footer() {
   return (

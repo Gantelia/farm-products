@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Section } from "../../styled";
+import { Section } from "../../styled/index.js";
 
 const Panel = styled(Section)`
   padding: ${({ theme }) => theme.indent};

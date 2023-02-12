@@ -11,6 +11,14 @@ module.exports = {
   module: {
     rules: [
       {
+        rules: [
+          {
+            test: /\.css$/i,
+            use: ["style-loader", "css-loader"],
+          },
+        ],
+      },
+      {
         test: /\.cmp.svg$/,
         use: {
           loader: "@svgr/webpack",

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import { GlobalStyle } from './styles';
-import { FEATURE_LIST } from '../../mocks/feature-list.js';
-import PageWrapper from '../layout/page-wrapper/page-wrapper';
+import { GlobalStyle } from "./styles.js";
+import { FEATURE_LIST } from "../../mocks/feature-list.js";
+import PageWrapper from "../layout/page-wrapper/page-wrapper.jsx";
 
 export default function App() {
   return (
