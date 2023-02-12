@@ -1,6 +1,6 @@
 import { ProductProvider } from "../components/ui/provider-mark/provider-mark.jsx";
 
-export const FEATURE_LIST = [
+export const featureList = [
   {
     id: 0,
     provider: ProductProvider.FARM,

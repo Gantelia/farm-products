@@ -1,17 +1,25 @@
 import React from "react";
+import { SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination, Mousewheel, Scrollbar } from "swiper/core";
+import "swiper/swiper-bundle.min.css";
+
 import {
   LeftColumn,
   StyledOrder,
   AddressInput,
   PriceLabel,
   PriceValue,
-} from "./styles";
+  ProductSwiper,
+} from "./styles.js";
 import Panel from "../../ui/panel/panel";
 import { TitleSize } from "../../ui/title/title";
 import Title from "../../ui/title/title";
 import Button from "../../ui/button/button";
+import ProductCard from "../../ui/product-card/product-card.jsx";
 
-function OrderPage() {
+SwiperCore.use([Mousewheel, Pagination, Scrollbar]);
+
+function OrderPage({ products }) {
   return (
     <StyledOrder as="form">
       <LeftColumn>
@@ -31,7 +39,20 @@ function OrderPage() {
           <Button maxWidth>Купить</Button>
         </Panel>
       </LeftColumn>
-      <div>Сюда нужно добавить слайдер с продуктами</div>
+      <ProductSwiper
+        spaceBetween={12}
+        direction="vertical"
+        slidesPerView="auto"
+        scrollbar={{ draggable: true }}
+        mousewheel
+        pagination={{ type: "fraction" }}
+      >
+        {products.map((product) => (
+          <SwiperSlide key={product.id}>
+            <ProductCard product={product} />
+          </SwiperSlide>
+        ))}
+      </ProductSwiper>
     </StyledOrder>
   );
 }

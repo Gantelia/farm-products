@@ -1,16 +1,20 @@
 import styled from "styled-components";
-import { Section, Label } from "../../styled";
-import { TextInput } from "../../ui/text-input/text-input";
+import { Swiper } from "swiper/react";
+import { Section, Label } from "../../styled/index.js";
+import { TextInput } from "../../ui/text-input/text-input.js";
 
 const leftWidth = "353px";
 
 export const StyledOrder = styled(Section)`
   display: flex;
+  position: absolute;
+  top: ${(props) => props.theme.headerHeight};
+  bottom: ${(props) => props.theme.footerHeight};
   padding-top: 40px;
   padding-bottom: 0;
   background-color: ${({ theme }) => theme.bgColorGray};
   max-width: ${({ theme }) => theme.pageWidth};
-  width: auto;
+  width: 100%;
   height: 100%;
 `;
 
@@ -35,4 +39,16 @@ export const PriceValue = styled.span`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 32px;
+`;
+
+export const ProductSwiper = styled(Swiper)`
+  width: 727px;
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper-slide {
+    flex-shrink: 1;
+  }
 `;

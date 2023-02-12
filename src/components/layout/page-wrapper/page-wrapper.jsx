@@ -6,13 +6,13 @@ import Header from "../header/header.jsx";
 import OrderPage from "../../pages/order-page/order-page";
 import Footer from "../footer/footer.jsx";
 
-function PageWrapper({ features }) {
+function PageWrapper({ features, products }) {
   return (
     <StyledPageWrapper>
       <Header />
       <Main>
         {/* <MainPage features={features} /> */}
-        <OrderPage />
+        <OrderPage products={products} />
       </Main>
       <Footer />
     </StyledPageWrapper>
