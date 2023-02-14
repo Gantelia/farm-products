@@ -36,7 +36,7 @@ function OrderPage({ products }) {
           <AddressInput placeholder="Введите адрес доставки" />
           <PriceLabel as="span">Цена</PriceLabel>
           <PriceValue>400 руб.</PriceValue>
-          <Button maxWidth>Купить</Button>
+          <Button>Купить</Button>
         </Panel>
       </LeftColumn>
       <ProductSwiper

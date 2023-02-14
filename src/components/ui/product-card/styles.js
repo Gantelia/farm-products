@@ -24,7 +24,10 @@ export const Price = styled.span`
   position: absolute;
   bottom: 0;
   display: inline-block;
+  padding: 4px 8px;
   font-size: 14px;
-  font-weight: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  vertical-align: center;
   background-color: ${({ theme }) => theme.bgBasicColor};
 `;

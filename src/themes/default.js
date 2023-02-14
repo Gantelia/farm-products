@@ -15,4 +15,6 @@ export const defaultTheme = {
   pageWidth: "1280px",
   pagePadding: "90px",
   indent: "20px",
+  headerHeight: "80px",
+  footerHeight: "80px",
 };
