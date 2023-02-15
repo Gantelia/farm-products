@@ -3,6 +3,11 @@ import { SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Mousewheel, Scrollbar } from "swiper/core";
 import "swiper/swiper-bundle.min.css";
 
+import Panel from "../../ui/panel/panel";
+import { TitleSize } from "../../ui/title/title";
+import Title from "../../ui/title/title";
+import Button from "../../ui/button/button";
+import ProductCard from "../../ui/product-card/product-card.jsx";
 import {
   LeftColumn,
   StyledOrder,
@@ -11,11 +16,6 @@ import {
   PriceValue,
   ProductSwiper,
 } from "./styles.js";
-import Panel from "../../ui/panel/panel";
-import { TitleSize } from "../../ui/title/title";
-import Title from "../../ui/title/title";
-import Button from "../../ui/button/button";
-import ProductCard from "../../ui/product-card/product-card.jsx";
 
 SwiperCore.use([Mousewheel, Pagination, Scrollbar]);
 
@@ -36,7 +36,7 @@ function OrderPage({ products }) {
           <AddressInput placeholder="Введите адрес доставки" />
           <PriceLabel as="span">Цена</PriceLabel>
           <PriceValue>400 руб.</PriceValue>
-          <Button>Купить</Button>
+          <Button isMaxWidth>Купить</Button>
         </Panel>
       </LeftColumn>
       <ProductSwiper

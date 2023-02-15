@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { ProductProvider } from "../provider-mark/provider-mark";
+
+import { ProductProvider } from "../provider-mark/provider-mark.jsx";
 
 export const Feature = styled.article`
   padding: ${({ theme }) => theme.indent};

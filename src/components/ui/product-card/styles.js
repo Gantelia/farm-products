@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { Img } from "../../styled/index.js";
 import Title from "../title/title.js";
 

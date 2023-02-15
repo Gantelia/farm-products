@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { TabButton, Header, Content, TabListItem } from "./styles.js";
 
 function Tabs({ tabsList = [], maxContentHeight }) {

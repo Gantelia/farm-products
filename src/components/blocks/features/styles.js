@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Section from "../../styled/section/section";
-import { Ul } from "../../styled";
+
+import { Ul, Section } from "../../styled/index.js";
 
 export const StyledFeatures = styled(Section)`
   display: flex;

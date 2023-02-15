@@ -1,8 +1,8 @@
 import React from "react";
 
 import Title, { TitleSize } from "../../ui/title/title";
-import { StyledAbout, AboutWrapper } from "./styles.js";
 import { P } from "../../styled";
+import { StyledAbout, AboutWrapper } from "./styles.js";
 
 function About() {
   return (

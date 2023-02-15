@@ -9,7 +9,7 @@ const StyledButton = styled.a`
   font-size: ${({ theme }) => theme.fontSize};
   font-weight: 700;
   line-height: ${({ theme }) => theme.lineHeight};
-  min-width: ${(props) => (props.$maxWidth ? "100%" : "260px")};
+  min-width: ${(props) => (props.isMaxWidth ? "100%" : "260px")};
   max-width: 700px;
   background-image: none;
   text-decoration: none;

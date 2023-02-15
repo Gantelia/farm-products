@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { P } from "../../styled/index.js";
 
 export const StyledFooter = styled.footer`

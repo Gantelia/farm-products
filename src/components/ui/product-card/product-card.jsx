@@ -1,11 +1,10 @@
 import React from "react";
 
-import { ContentWrapper, Price } from "./styles.js";
 import { TitleSize } from "../title/title.js";
-import { ProductImage, ProductTitle } from "./styles.js";
 import OptionsList from "../options-list/options-list.jsx";
 import Tabs from "../tabs/tabs.jsx";
 import Panel from "../panel/panel.js";
+import { ContentWrapper, Price, ProductImage, ProductTitle } from "./styles.js";
 
 function ProductCard({ product }) {
   const { description, specifications, structure } = product;
