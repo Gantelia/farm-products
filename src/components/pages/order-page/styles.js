@@ -4,10 +4,9 @@ import { Swiper } from "swiper/react";
 import { Section, Label } from "../../styled/index.js";
 import { TextInput } from "../../ui/text-input/text-input.js";
 
-const leftWidth = "353px";
+const leftWidth = "373px";
 
 export const StyledOrder = styled(Section)`
-  display: flex;
   position: absolute;
   top: ${({ theme }) => theme.headerHeight};
   bottom: ${({ theme }) => theme.footerHeight};
@@ -20,10 +19,10 @@ export const StyledOrder = styled(Section)`
 
 export const LeftColumn = styled.div`
   width: ${leftWidth};
-  padding-right: 6px;
   max-height: 100%;
   overflow-y: auto;
   scrollbar-gutter: stable;
+  margin-right: auto;
 `;
 
 export const AddressInput = styled(TextInput)`
@@ -45,6 +44,7 @@ export const PriceValue = styled.span`
 export const ProductSwiper = styled(Swiper)`
   width: 727px;
   margin-left: 0;
+  margin-right: 0;
 
   .swiper-pagination {
     display: none;
