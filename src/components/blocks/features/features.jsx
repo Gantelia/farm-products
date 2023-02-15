@@ -3,6 +3,7 @@ import React from "react";
 import FeatureCard from "../../ui/feature-card/feature-card";
 import Title from "../../ui/title/title";
 import Button from "../../ui/button/button.jsx";
+import { Li } from "../../styled/index.js";
 import { StyledFeatures, FeatureList } from "./styles";
 
 function Features({ features }) {
@@ -14,9 +15,9 @@ function Features({ features }) {
         </Title>
         <FeatureList>
           {features?.map((feature) => (
-            <li key={feature.id}>
+            <Li key={feature.id}>
               <FeatureCard {...feature} />
-            </li>
+            </Li>
           ))}
         </FeatureList>
         <Button link={"/buy"}>Купить</Button>
