@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Mousewheel, Scrollbar } from "swiper/core";
 import "swiper/swiper-bundle.min.css";
@@ -8,6 +8,7 @@ import { TitleSize } from "../../ui/title/title";
 import Title from "../../ui/title/title";
 import Button from "../../ui/button/button";
 import ProductCard from "../../ui/product-card/product-card.jsx";
+import CheckboxList from "../../ui/checkbox-list/checkbox-list.jsx";
 import {
   LeftColumn,
   StyledOrder,
@@ -15,11 +16,14 @@ import {
   PriceLabel,
   PriceValue,
   ProductSwiper,
+  CheckboxLabel,
 } from "./styles.js";
 
 SwiperCore.use([Mousewheel, Pagination, Scrollbar]);
 
 function OrderPage({ products }) {
+  const [selectedProductIds, setSelectedProductIds] = useState([]);
+
   return (
     <StyledOrder as="form">
       <LeftColumn>
@@ -27,7 +31,15 @@ function OrderPage({ products }) {
           <Title as="h2" size={TitleSize.EXTRA_SMALL} marginBottom={12}>
             Выберите продукты
           </Title>
-          Чекбоксы со списком продуктов
+          <CheckboxList
+            selectedValues={selectedProductIds}
+            labelComponent={CheckboxLabel}
+            options={products.map((product) => ({
+              value: product.id,
+              title: product.title,
+            }))}
+            onChange={setSelectedProductIds}
+          />
         </Panel>
         <Panel>
           <Title as="h2" size={TitleSize.EXTRA_SMALL} marginBottom={24}>
@@ -45,7 +57,7 @@ function OrderPage({ products }) {
         slidesPerView="auto"
         scrollbar={{ draggable: true }}
         mousewheel
-        pagination={{ type: "fraction" }}
+        pagination={{ type: "fractions" }}
       >
         {products.map((product) => (
           <SwiperSlide key={product.id}>

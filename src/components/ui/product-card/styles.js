@@ -24,11 +24,10 @@ export const ProductTitle = styled(Title)`
 export const Price = styled.span`
   position: absolute;
   bottom: 0;
-  display: inline-block;
+  display: block;
   padding: 4px 8px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
-  vertical-align: center;
   background-color: ${({ theme }) => theme.bgBasicColor};
 `;

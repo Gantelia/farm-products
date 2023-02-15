@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Swiper } from "swiper/react";
 
 import { Section, Label } from "../../styled/index.js";
 import { TextInput } from "../../ui/text-input/text-input.js";
+import selectedCheckbox from "../../../assets/svg/checkbox-checked.svg";
 
 const leftWidth = "373px";
 
@@ -52,5 +53,40 @@ export const ProductSwiper = styled(Swiper)`
 
   .swiper-slide {
     flex-shrink: 1;
+  }
+`;
+
+export const CheckboxLabel = styled.span`
+  position: relative;
+  display: block;
+  padding-top: 15px;
+  padding-right: 16px;
+  padding-bottom: 14px;
+  font-size: 18px;
+  text-align: left;
+  align-items: center;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    right: 0;
+    top: 17px;
+    display: block;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    ${(props) =>
+      props.$isChecked
+        ? css`
+            background-color: #fc9b27;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-image: url(${selectedCheckbox});
+            background-repeat: no-repeat;
+            background-position: center center;
+          `
+        : css`
+            background-color: ${props.theme.bgLightColor};
+            border: 1px solid rgba(0, 0, 0, 0.1);
+          `}
   }
 `;

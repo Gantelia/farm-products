@@ -4,3 +4,4 @@ export { default as Ul } from "./ul/ul.js";
 export { default as P } from "./p/p.js";
 export { default as Img } from "./img/img.js";
 export { default as Li } from "./li/li.js";
+export { default as VisuallyHiddenInput } from "./visually-hidden-input/visually-hidden-input.js";
