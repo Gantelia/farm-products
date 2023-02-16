@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Mousewheel, Scrollbar } from "swiper/core";
+import { Pagination, Mousewheel, Scrollbar } from "swiper";
 import "swiper/swiper-bundle.min.css";
 
 import Panel from "../../ui/panel/panel";
@@ -19,10 +19,15 @@ import {
   CheckboxLabel,
 } from "./styles.js";
 
-SwiperCore.use([Mousewheel, Pagination, Scrollbar]);
-
 function OrderPage({ products }) {
   const [selectedProductIds, setSelectedProductIds] = useState([]);
+  const [swiperRef, setSwiperRef] = useState(null);
+
+  const handleProductClick = (value, index) => {
+    if (!selectedProductIds.includes(value)) {
+      swiperRef.slideTo(index, 0);
+    }
+  };
 
   return (
     <StyledOrder as="form">
@@ -39,6 +44,7 @@ function OrderPage({ products }) {
               title: product.title,
             }))}
             onChange={setSelectedProductIds}
+            onLabelClick={handleProductClick}
           />
         </Panel>
         <Panel>
@@ -52,12 +58,14 @@ function OrderPage({ products }) {
         </Panel>
       </LeftColumn>
       <ProductSwiper
+        modules={[Pagination, Mousewheel, Scrollbar]}
         spaceBetween={12}
         direction="vertical"
         slidesPerView="auto"
         scrollbar={{ draggable: true }}
         mousewheel
         pagination={{ type: "fractions" }}
+        onSwiper={setSwiperRef}
       >
         {products.map((product) => (
           <SwiperSlide key={product.id}>
