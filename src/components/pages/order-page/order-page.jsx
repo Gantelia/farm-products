@@ -23,6 +23,15 @@ function OrderPage({ products }) {
   const [selectedProductIds, setSelectedProductIds] = useState([]);
   const [swiperRef, setSwiperRef] = useState(null);
 
+  const selectedProducts = selectedProductIds.map((id) =>
+    products.find((product) => product.id === id)
+  );
+
+  const fullPrice = selectedProducts.reduce(
+    (sum, product) => (sum += product.description.price),
+    0
+  );
+
   const handleProductClick = (value, index) => {
     if (!selectedProductIds.includes(value)) {
       swiperRef.slideTo(index, 0);
@@ -53,7 +62,7 @@ function OrderPage({ products }) {
           </Title>
           <AddressInput placeholder="Введите адрес доставки" />
           <PriceLabel as="span">Цена</PriceLabel>
-          <PriceValue>400 руб.</PriceValue>
+          <PriceValue value={fullPrice} />
           <Button isMaxWidth>Купить</Button>
         </Panel>
       </LeftColumn>

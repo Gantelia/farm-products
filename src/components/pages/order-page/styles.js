@@ -4,6 +4,7 @@ import { Swiper } from "swiper/react";
 import { Section, Label } from "../../styled/index.js";
 import { TextInput } from "../../ui/text-input/text-input.js";
 import selectedCheckbox from "../../../assets/svg/checkbox-checked.svg";
+import Price from "../../ui/price/price.jsx";
 
 const leftWidth = "373px";
 
@@ -35,10 +36,7 @@ export const PriceLabel = styled(Label)`
   margin-bottom: 6px;
 `;
 
-export const PriceValue = styled.span`
-  display: block;
-  font-size: 24px;
-  font-weight: 700;
+export const PriceValue = styled(Price)`
   margin-bottom: 32px;
 `;
 
