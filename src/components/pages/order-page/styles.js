@@ -88,3 +88,10 @@ export const CheckboxLabel = styled.span`
           `}
   }
 `;
+
+export const AllProductsSold = styled.p`
+  margin-top: 40px;
+  width: ${({ theme }) => theme.pageWidth};
+  margin-left: ${({ theme }) => theme.pagePadding};
+  margin-right: ${({ theme }) => theme.pagePadding};
+`;

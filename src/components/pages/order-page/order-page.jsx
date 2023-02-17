@@ -17,6 +17,7 @@ import {
   PriceValue,
   ProductSwiper,
   CheckboxLabel,
+  AllProductsSold,
 } from "./styles.js";
 
 function OrderPage({ products }) {
@@ -52,7 +53,7 @@ function OrderPage({ products }) {
     );
   };
 
-  return (
+  return products && products.length ? (
     <StyledOrder as="form">
       <LeftColumn>
         <Panel paddingTop="24" paddingBottom="12" marginBottom="20">
@@ -80,7 +81,11 @@ function OrderPage({ products }) {
           />
           <PriceLabel as="span">Цена</PriceLabel>
           <PriceValue value={fullPrice} />
-          <Button isMaxWidth onClick={handleBuyButtonClick}>
+          <Button
+            isMaxWidth
+            onClick={handleBuyButtonClick}
+            disabled={!selectedProducts.length || !address}
+          >
             Купить
           </Button>
         </Panel>
@@ -102,6 +107,10 @@ function OrderPage({ products }) {
         ))}
       </ProductSwiper>
     </StyledOrder>
+  ) : (
+    <AllProductsSold>
+      Продукты были слишком вкусные, и их разобрали.
+    </AllProductsSold>
   );
 }
 
