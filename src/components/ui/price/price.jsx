@@ -3,7 +3,7 @@ import React from "react";
 import { StyledPrice } from "./styles.js";
 
 const formatPrice = (value) => {
-  const roundedPrice = Math.round(value);
+  const roundedPrice = Math.ceil(value);
   return roundedPrice.toString().replace(/(\d)(?=(\d\d\d)+$)/, "$1 ");
 };
 

@@ -22,6 +22,7 @@ import {
 function OrderPage({ products }) {
   const [selectedProductIds, setSelectedProductIds] = useState([]);
   const [swiperRef, setSwiperRef] = useState(null);
+  const [address, setAddress] = useState("");
 
   const selectedProducts = selectedProductIds.map((id) =>
     products.find((product) => product.id === id)
@@ -36,6 +37,19 @@ function OrderPage({ products }) {
     if (!selectedProductIds.includes(value)) {
       swiperRef.slideTo(index, 0);
     }
+  };
+
+  const handleBuyButtonClick = () => {
+    alert(
+      `Спасибо за заказ! Вы купили: \n${selectedProducts
+        .map(
+          (product) => `${product.title} - ${product.description.price} руб.\n`
+        )
+        .join("")}
+      Итого: ${fullPrice} руб.
+      Доставка по адресу: ${address}.
+    `
+    );
   };
 
   return (
@@ -60,10 +74,15 @@ function OrderPage({ products }) {
           <Title as="h2" size={TitleSize.EXTRA_SMALL} marginBottom={24}>
             Сделать заказ
           </Title>
-          <AddressInput placeholder="Введите адрес доставки" />
+          <AddressInput
+            placeholder="Введите адрес доставки"
+            onChange={(evt) => setAddress(evt.target.value)}
+          />
           <PriceLabel as="span">Цена</PriceLabel>
           <PriceValue value={fullPrice} />
-          <Button isMaxWidth>Купить</Button>
+          <Button isMaxWidth onClick={handleBuyButtonClick}>
+            Купить
+          </Button>
         </Panel>
       </LeftColumn>
       <ProductSwiper
