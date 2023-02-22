@@ -5,6 +5,7 @@ export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: ${({ theme }) => theme.headerHeight};
   background-color: #ffffff;
   width: 100%;
   position: relative;

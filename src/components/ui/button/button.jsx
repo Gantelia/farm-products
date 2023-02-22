@@ -6,7 +6,7 @@ function Button({ children, isMaxWidth, link, onClick, className, ...props }) {
   return (
     <StyledButton
       {...props}
-      isMaxWidth={isMaxWidth}
+      $isMaxWidth={isMaxWidth}
       className={className}
       {...(link ? { to: link } : { as: "button", onClick, type: "button" })}
     >

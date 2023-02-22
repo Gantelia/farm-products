@@ -1,12 +1,12 @@
-import React from 'react';
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { ThemeProvider } from 'styled-components';
+import React from "react";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { ThemeProvider } from "styled-components";
 
-import App from './components/app/app.js';
-import { defaultTheme } from './themes/default.js';
+import App from "./components/app/app.js";
+import { defaultTheme } from "./themes/default.js";
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(

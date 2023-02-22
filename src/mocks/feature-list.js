@@ -1,6 +1,6 @@
 import { ProductProvider } from "../components/ui/provider-mark/provider-mark.jsx";
 
-export const featureList = [
+const features = [
   {
     id: 0,
     provider: ProductProvider.FARM,
@@ -34,3 +34,5 @@ export const featureList = [
       "Мясные полуфабрикаты, в которых содержится чрезмерно много натрия, вредных жиров, консервантов",
   },
 ];
+
+export default features;
