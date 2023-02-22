@@ -63,4 +63,5 @@ module.exports = {
     open: true,
     hot: true,
   },
+  performance: { hints: false },
 };
