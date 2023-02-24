@@ -8,6 +8,7 @@ import { TitleSize } from "../../ui/title/title";
 import Title from "../../ui/title/title";
 import Button from "../../ui/button/button";
 import ProductCard from "../../ui/product-card/product-card.jsx";
+import useSingleton from "../../../hooks/use-singleton.js";
 import CheckboxList from "../../ui/checkbox-list/checkbox-list.jsx";
 import {
   LeftColumn,
@@ -24,6 +25,7 @@ function OrderPage({ products }) {
   const [selectedProductIds, setSelectedProductIds] = useState([]);
   const [swiperRef, setSwiperRef] = useState(null);
   const [address, setAddress] = useState("");
+  const helpMessage = useSingleton();
 
   const selectedProducts = selectedProductIds.map((id) =>
     products.find((product) => product.id === id)
@@ -54,59 +56,62 @@ function OrderPage({ products }) {
   };
 
   return products && products.length ? (
-    <StyledOrder as="form">
-      <LeftColumn>
-        <Panel paddingTop="24" paddingBottom="12" marginBottom="20">
-          <Title as="h2" size={TitleSize.EXTRA_SMALL} marginBottom={12}>
-            Выберите продукты
-          </Title>
-          <CheckboxList
-            selectedValues={selectedProductIds}
-            labelComponent={CheckboxLabel}
-            options={products.map((product) => ({
-              value: product.id,
-              title: product.title,
-            }))}
-            onChange={setSelectedProductIds}
-            onLabelClick={handleProductClick}
-          />
-        </Panel>
-        <Panel>
-          <Title as="h2" size={TitleSize.EXTRA_SMALL} marginBottom={24}>
-            Сделать заказ
-          </Title>
-          <AddressInput
-            placeholder="Введите адрес доставки"
-            onChange={(evt) => setAddress(evt.target.value)}
-          />
-          <PriceLabel as="span">Цена</PriceLabel>
-          <PriceValue value={fullPrice} />
-          <Button
-            isMaxWidth
-            onClick={handleBuyButtonClick}
-            disabled={!selectedProducts.length || !address}
-          >
-            Купить
-          </Button>
-        </Panel>
-      </LeftColumn>
-      <ProductSwiper
-        modules={[Pagination, Mousewheel, Scrollbar]}
-        spaceBetween={12}
-        direction="vertical"
-        slidesPerView="auto"
-        scrollbar={{ draggable: true }}
-        mousewheel
-        pagination={{ type: "fractions" }}
-        onSwiper={setSwiperRef}
-      >
-        {products.map((product) => (
-          <SwiperSlide key={product.id}>
-            <ProductCard product={product} />
-          </SwiperSlide>
-        ))}
-      </ProductSwiper>
-    </StyledOrder>
+    <>
+      {helpMessage}
+      <StyledOrder as="form" isBigPaddingTop={!!helpMessage}>
+        <LeftColumn>
+          <Panel paddingTop="24" paddingBottom="12" marginBottom="20">
+            <Title as="h2" size={TitleSize.EXTRA_SMALL} marginBottom={12}>
+              Выберите продукты
+            </Title>
+            <CheckboxList
+              selectedValues={selectedProductIds}
+              labelComponent={CheckboxLabel}
+              options={products.map((product) => ({
+                value: product.id,
+                title: product.title,
+              }))}
+              onChange={setSelectedProductIds}
+              onLabelClick={handleProductClick}
+            />
+          </Panel>
+          <Panel>
+            <Title as="h2" size={TitleSize.EXTRA_SMALL} marginBottom={24}>
+              Сделать заказ
+            </Title>
+            <AddressInput
+              placeholder="Введите адрес доставки"
+              onChange={(evt) => setAddress(evt.target.value)}
+            />
+            <PriceLabel as="span">Цена</PriceLabel>
+            <PriceValue value={fullPrice} />
+            <Button
+              isMaxWidth
+              onClick={handleBuyButtonClick}
+              disabled={!selectedProducts.length || !address}
+            >
+              Купить
+            </Button>
+          </Panel>
+        </LeftColumn>
+        <ProductSwiper
+          modules={[Pagination, Mousewheel, Scrollbar]}
+          spaceBetween={12}
+          direction="vertical"
+          slidesPerView="auto"
+          scrollbar={{ draggable: true }}
+          mousewheel
+          pagination={{ type: "fractions" }}
+          onSwiper={setSwiperRef}
+        >
+          {products.map((product) => (
+            <SwiperSlide key={product.id}>
+              <ProductCard product={product} />
+            </SwiperSlide>
+          ))}
+        </ProductSwiper>
+      </StyledOrder>
+    </>
   ) : (
     <AllProductsSold>
       Продукты были слишком вкусные, и их разобрали.

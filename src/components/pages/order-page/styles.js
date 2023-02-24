@@ -10,9 +10,9 @@ const leftWidth = "373px";
 
 export const StyledOrder = styled(Section)`
   position: absolute;
-  top: ${({ theme }) => theme.headerHeight};
-  bottom: ${({ theme }) => theme.footerHeight};
-  padding-top: 40px;
+  top: 0;
+  bottom: 0;
+  padding-top: ${(props) => (props.isBigPaddingTop ? "90px" : "40px")};
   padding-bottom: 0;
   background-color: ${({ theme }) => theme.bgColorGray};
   max-width: ${({ theme }) => theme.pageWidth};

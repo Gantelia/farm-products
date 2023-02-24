@@ -9,6 +9,7 @@ export const defaultTheme = {
   bgLightColor: "#f6f6f6",
   bgColorGray: "#f7f7f7",
   colorWhite: "#ffffff",
+  colorBlack: "#000000",
   fontFamily: '"Inter", "Arial", sans-serif',
   fontSize: "18px",
   lineHeight: "1.5",

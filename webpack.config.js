@@ -63,6 +63,5 @@ module.exports = {
     open: true,
     hot: true,
   },
-  sourceType: "module",
   performance: { hints: false },
 };

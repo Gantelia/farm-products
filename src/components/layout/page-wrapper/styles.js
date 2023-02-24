@@ -8,4 +8,5 @@ export const StyledPageWrapper = styled.div`
 
 export const Main = styled.main`
   flex-grow: 1;
+  position: relative;
 `;
