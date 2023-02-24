@@ -2,7 +2,6 @@
   "name": "farm-products",
   "version": "0.1.0",
   "private": "true",
-  "type": "module",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -16,7 +15,9 @@
     "eslint": "eslint --ext .jsx --ext .js ./src/",
     "svgr": "svgr --ext .jsx -d ../farm-products/src/components/icons/ src/assets/svg/",
     "stylelint": "stylelint \"./src/**/*.{js,jsx}\"",
-    "stylelint-check": "stylelint-config-prettier-check"
+    "stylelint-check": "stylelint-config-prettier-check",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "browserslist": {
     "production": [
@@ -86,6 +87,14 @@
     "@babel/eslint-parser": "^7.19.1",
     "@babel/preset-env": "^7.19.3",
     "@babel/preset-react": "^7.18.6",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
     "@svgr/cli": "^6.3.1",
     "@svgr/webpack": "^6.3.1",
     "babel-loader": "^8.2.5",

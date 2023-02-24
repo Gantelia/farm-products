@@ -18,7 +18,8 @@ const StyledButton = styled(Link)`
   box-shadow: none;
   transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
   cursor: pointer;
-  display: block;
+  display: inline-block;
+  box-sizing: border-box;
 
   &:hover {
     background-color: ${({ theme }) => theme.buttonHoverActiveColor};
