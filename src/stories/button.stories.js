@@ -8,7 +8,7 @@ export default {
   argTypes: { onClick: { action: "button-click" } },
   args: {
     isMaxWidth: false,
-    label: "Нажми на меня",
+    children: "Нажми на меня",
     link: void 0,
   },
 };
@@ -22,7 +22,7 @@ MaxWidth.args = {
 
 export const LongLabel = Template.bind({});
 LongLabel.args = {
-  label: "Кнопка с достаточно длинной надписью",
+  children: "Кнопка с достаточно длинной надписью",
 };
 
 export const Link = Template.bind({});
