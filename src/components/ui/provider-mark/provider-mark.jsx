@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { StyledProviderMark } from './styles';
+import { StyledProviderMark } from "./styles";
 
 export const ProductProvider = {
-  FARM: 'farm',
-  SHOP: 'shop'
+  FARM: "farm",
+  STORE: "store",
 };
 
 function ProviderMark({ provider }) {
@@ -12,13 +12,13 @@ function ProviderMark({ provider }) {
 
   if (provider === ProductProvider.FARM) {
     options = {
-      text: 'Фермерские продукты',
-      bgColor: '#88aa4d'
+      text: "Фермерские продукты",
+      bgColor: "#88aa4d",
     };
   } else {
     options = {
-      text: 'Магазинные продукты',
-      bgColor: '#f75531'
+      text: "Магазинные продукты",
+      bgColor: "#f75531",
     };
   }
 
@@ -26,4 +26,3 @@ function ProviderMark({ provider }) {
 }
 
 export default ProviderMark;
-

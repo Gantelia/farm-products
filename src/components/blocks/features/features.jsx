@@ -1,13 +1,13 @@
 import React from "react";
 
-import FeatureCard from "../../ui/feature-card/feature-card";
+import FactoryFeatureCard from "../../ui/factory-feature-card/factory-feature-card.jsx";
 import Title from "../../ui/title/title";
 import Button from "../../ui/button/button.jsx";
 import { Li } from "../../styled/index.js";
 import { AppRoute } from "../../../const.js";
 import { StyledFeatures, FeatureList } from "./styles";
 
-function Features({ features }) {
+function Features({ features = [] }) {
   return (
     features?.length && (
       <StyledFeatures>
@@ -17,7 +17,7 @@ function Features({ features }) {
         <FeatureList>
           {features?.map((feature) => (
             <Li key={feature.id}>
-              <FeatureCard {...feature} />
+              <FactoryFeatureCard {...feature} />
             </Li>
           ))}
         </FeatureList>

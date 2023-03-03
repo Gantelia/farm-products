@@ -11,7 +11,7 @@ const features = [
   },
   {
     id: 1,
-    provider: ProductProvider.SHOP,
+    provider: ProductProvider.STORE,
     image: "https://i.ibb.co/9tFXDTJ/garbage.png",
     title: "Просроченные продукты",
     description:
@@ -27,7 +27,7 @@ const features = [
   },
   {
     id: 3,
-    provider: ProductProvider.SHOP,
+    provider: ProductProvider.STORE,
     image: "https://i.ibb.co/x7k6QGs/no-meat.png",
     title: "Некачественное мясо",
     description:
